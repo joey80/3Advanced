@@ -1,0 +1,26 @@
+@import '../../../assets/scss/index.scss';
+
+.swatch {
+  height: 100px;
+  width: 100px;
+}
+
+.color1 {
+  background-color: $scale-1;
+}
+
+.color2 {
+  background-color: $scale-2;
+}
+
+.color3 {
+  background-color: $scale-3;
+}
+
+.color4 {
+  background-color: $scale-4;
+}
+
+.color5 {
+  background-color: $scale-5;
+}
