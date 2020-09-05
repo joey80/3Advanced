@@ -1,5 +1,6 @@
 import React from 'react';
 import Swatch from './Swatch/Swatch';
+import Typography from './Typography/Typography';
 
 const StyleGuide = () => {
   const Colors = () => {
@@ -14,6 +15,7 @@ const StyleGuide = () => {
         <Colors />
       </div>
       <h2>Typography</h2>
+      <Typography />
     </div>
   );
 };
