@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import Audio from './Audio/Audio';
 import Logos from './Logo/Logo';
 import Swatch from './Swatch/Swatch';
 import Typography from './Typography/Typography';
@@ -30,6 +31,9 @@ const StyleGuide = () => {
         <FlexWrapper>
           <Colors />
         </FlexWrapper>
+      </Section>
+      <Section title='Audio'>
+        <Audio />
       </Section>
       <Section title='Typography'>
         <Typography />
