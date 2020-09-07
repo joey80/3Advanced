@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Logos from './Logo/Logo';
 import Swatch from './Swatch/Swatch';
 import Typography from './Typography/Typography';
@@ -14,17 +14,29 @@ const StyleGuide = () => {
     <h2 style={{ color: '#7b8ba4', marginTop: '100px' }}>{children}</h2>
   );
 
+  const Section = ({ children, title }) => {
+    return (
+      <Fragment>
+        <Heading>{title}</Heading>
+        {children}
+      </Fragment>
+    );
+  };
+
   return (
     <div style={{ padding: '30px' }}>
       <h1>StyleGuide</h1>
-      <Heading>Colors</Heading>
-      <FlexWrapper>
-        <Colors />
-      </FlexWrapper>
-      <Heading>Typography</Heading>
-      <Typography />
-      <Heading>Identity</Heading>
-      <Logos />
+      <Section title='Colors'>
+        <FlexWrapper>
+          <Colors />
+        </FlexWrapper>
+      </Section>
+      <Section title='Typography'>
+        <Typography />
+      </Section>
+      <Section title='Identity'>
+        <Logos />
+      </Section>
     </div>
   );
 };
