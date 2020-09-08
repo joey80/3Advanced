@@ -6,14 +6,23 @@ import Typography from './Typography/Typography';
 
 const StyleGuide = () => {
   const Colors = () => {
-    return Array.from(Array(5), (_, i) => <Swatch scale={i + 1} />);
+    return Array.from(Array(5), (_, index) => <Swatch scale={index + 1} key={index} />);
   };
 
-  const FlexWrapper = ({ children }) => <div style={{ display: 'flex' }}>{children}</div>;
+  const FlexWrapper = ({ children }) => (
+    <div style={{ alignItems: 'flex-start', display: 'flex' }}>{children}</div>
+  );
 
   const Heading = ({ children }) => (
     <h2 style={{ color: '#7b8ba4', marginTop: '100px' }}>{children}</h2>
   );
+
+  const Images = () => {
+    const fileNames = ['background', 'splash-enter', 'splash-logo', 'splash-logoextend'];
+    return fileNames.map((elm, index) => (
+      <img src={require(`../../assets/images/${elm}.gif`)} key={index} alt={`${elm} example`} />
+    ));
+  };
 
   const Section = ({ children, title }) => {
     return (
@@ -37,6 +46,11 @@ const StyleGuide = () => {
       </Section>
       <Section title='Typography'>
         <Typography />
+      </Section>
+      <Section title='Image Reference'>
+        <FlexWrapper>
+          <Images />
+        </FlexWrapper>
       </Section>
       <Section title='Identity'>
         <Logos />
