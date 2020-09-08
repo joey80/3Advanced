@@ -6,7 +6,7 @@ import Typography from './Typography/Typography';
 
 const StyleGuide = () => {
   const Colors = () => {
-    return Array.from(Array(5), (_, i) => <Swatch scale={i + 1} />);
+    return Array.from(Array(5), (_, index) => <Swatch scale={index + 1} key={index} />);
   };
 
   const FlexWrapper = ({ children }) => (
